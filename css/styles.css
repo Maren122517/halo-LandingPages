@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header img {
+  width: 150px;
+}
+
+main {
+  background-image: url("https://news.microsoft.com/wp-content/uploads/prod/sites/61/2024/01/Operation_SpiritOfFire-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  main {
+    padding: 2rem 1rem;
+  }
+  main img {
+    width: 140px;
+  }
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+section.welcome {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+section.welcome .container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+section.features {
+  background-color: #f4f4f4;
+}
+section.features .feature {
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+  section .feature {
+    margin-bottom: 1rem;
+  }
+}
+section.cta {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+section.cta .btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+  section .btn {
+    padding: 0.5rem 2rem;
+  }
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 0.5rem 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
