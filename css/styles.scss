@@ -4,10 +4,12 @@ $light-color: #f4f4f4;
 $white-color: white;
 $font-stack: Arial, sans-serif;
 $breakpoint-mobile: 768px;
+$btn-color: #007BFF;
+$btn-hover-color: #0056b3;
 
 body {
   font-family: $font-stack;
-  color: #f4f4f4;
+  color: $white-color;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +18,7 @@ body {
 header {
   background-color: $primary-color;
   color: $white-color;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,80 +28,99 @@ header {
     font-weight: bold;
   }
 
-  img {
-    width: 150px;
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 40px;
   }
 }
 
 main {
-    background-image: url('https://news.microsoft.com/wp-content/uploads/prod/sites/61/2024/01/Operation_SpiritOfFire-1.jpg');
-    background-size: cover;
-    background-position: center;
+  background-image: url('https://news.microsoft.com/wp-content/uploads/prod/sites/61/2024/01/Operation_SpiritOfFire-1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 1rem;
 
-    @media (max-width: $breakpoint-mobile) {
-      padding: 2rem 1rem;
-      
-      img {
-        width: 140px;
-      }
-    }
+  @media (max-width: $breakpoint-mobile) {
+    padding: 2rem 1rem;
+  }
 }
 
-section {
+#welcome {
+  .container {
     display: flex;
-    justify-content: center;
-    padding: 4rem 2rem;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
 
-    &.welcome {
-        background-size: cover;
-        background-position: center;
-        color: $white-color;
-        text-align: center;
-
-        .container {
-          background: rgba(0, 0, 0, 0.5);
-          padding: 2rem;
-          border-radius: 10px;
-        }
+    .text {
+      flex: 2;
     }
 
-    &.features {
-        background-color: $light-color;
+    .image {
+      flex: 1;
 
-        .feature {
-        margin-bottom: 2rem;
-        }
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      padding: 2rem 1rem;
-
-      .feature {
-        margin-bottom: 1rem;
+      img {
+        max-width: 100%;
+        border-radius: 15px;
       }
     }
 
-    &.cta {
-      background-color: $primary-color;
-      color: $white-color;
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
       text-align: center;
 
-      .btn {
-          background-color: $secondary-color;
-          color: $white-color;
-          padding: 0.5rem 1rem;
-          text-decoration: none;
-          border-radius: 5px;
+      .image img {
+        width: 70px;
+        height: 70px;
       }
     }
+  }
+}
 
-    @media (max-width: $breakpoint-mobile) {
-      padding: 2rem 1rem;
+#features, #cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
 
-      .btn {
-        padding: 0.5rem 2rem;
-      }
+  .container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+  }
+}
+
+#features {
+  color: $white-color;
+
+  .feature {
+    margin-bottom: 20px;
+  }
+}
+
+#cta {
+  background-color: rgba(26, 26, 26, 0.8);
+  color: $white-color;
+
+  .btn {
+    background-color: $btn-color;
+    color: $white-color;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $btn-hover-color;
     }
+  }
 }
 
 footer {
